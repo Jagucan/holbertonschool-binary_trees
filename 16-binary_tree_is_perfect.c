@@ -31,17 +31,17 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	int left = 0, right = 0;
 
-    if (!tree)
-        return (0);
+	if (!tree)
+		return (0);
 
-    left = binary_tree_height(tree->left);
-    right = binary_tree_height(tree->right);
+	left = binary_tree_height(tree->left);
+	right = binary_tree_height(tree->right);
 
-    if (left != right)
-        return (0);
+	if (left != right)
+		return (0);
 
-    if (!binary_tree_is_perfect(tree->left) || !binary_tree_is_perfect(tree->right))
-        return (0);
+	if (!binary_tree_is_perfect(tree->left) || !binary_tree_is_perfect(tree->right))
+		return (0);
 
-    return (1);
+	return (1);
 }
