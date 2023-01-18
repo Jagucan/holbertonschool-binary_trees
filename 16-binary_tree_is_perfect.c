@@ -40,7 +40,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	if (left != right)
 		return (0);
 
-	else if (!binary_tree_is_perfect(tree->left) && !binary_tree_is_perfect(tree->right))
+	else if ((!left && right) || (left && !right))
 		return (0);
 
 	else
